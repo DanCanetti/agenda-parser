@@ -6,7 +6,7 @@ new Vue({
   data() {
     return {
       title: 'Agenda Items',
-      agendaItems: []
+      agendaItems: null
     }
   },
   mounted() {
