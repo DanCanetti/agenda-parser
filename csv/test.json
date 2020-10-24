@@ -3,27 +3,18 @@
     "Start": "08:00",
     "End": "12:00",
     "Title": "This is a title",
-    "Speaker": "Speaker Name",
-    "": "",
-    "__1": "",
-    "__2": ""
+    "Speaker": "Speaker Name"
   },
   {
     "Start": "12:00",
     "End": "13:00",
     "Title": "This is a title",
-    "Speaker": "Speaker Name",
-    "": "",
-    "__1": "",
-    "__2": ""
+    "Speaker": "Speaker Name"
   },
   {
     "Start": "13:00",
     "End": "16:00",
     "Title": "This is a title",
-    "Speaker": "Speaker Name",
-    "": "",
-    "__1": "",
-    "__2": ""
+    "Speaker": "Speaker Name"
   }
 ]

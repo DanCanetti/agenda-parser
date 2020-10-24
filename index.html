@@ -9,8 +9,8 @@
         <div id="agenda">
             <h1>{{ title }}</h1>
             <ol>
-                <li v-for="agendaItem in agendaItems" :key="agendaItem.content">
-                    {{ agendaItem.content }}
+                <li v-for="agendaItem in agendaItems" :key="JSON.stringify(agendaItem)">
+                    
                 </li>
             </ol>
         </div>
