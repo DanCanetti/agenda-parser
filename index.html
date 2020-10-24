@@ -10,7 +10,7 @@
             <h1>{{ title }}</h1>
             <ol>
                 <li v-for="agendaItem in agendaItems" :key="agendaItem.content">
-                    {{ agendaItem.start }} | {{ agendaItem.end }} | {{ agendaItem.title }} | {{ agendaItem.speaker }}
+                    {{ agendaItem.content }}
                 </li>
             </ol>
         </div>
