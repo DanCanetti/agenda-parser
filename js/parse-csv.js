@@ -12,6 +12,6 @@ new Vue({
   mounted() {
     axios
       .get('csv/test.json')
-      .then(response => (this.agendaItems = response.data))
+      .then(response => (this.agendaItems = response.data.data))
   }
 });
