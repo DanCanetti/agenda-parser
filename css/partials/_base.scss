@@ -1,0 +1,22 @@
+// Media Queries
+$screen-sm: 576px;
+@mixin sm {
+   @media (max-width: #{$screen-sm}) {
+       @content;
+   }
+}
+
+// Mixins
+@mixin transitionall($length) {
+    -webkit-transition: all $length ease-in-out;
+    -moz-transition: all $length ease-in-out;
+    -o-transition: all $length ease-in-out;
+    transition: all $length ease-in-out;
+  }
+  
+  @mixin transitiondelay($length) {
+    -webkit-transition-delay: $length;
+    -moz-transition-delay: $length;
+    -o-transition-delay: $length;
+    transition-delay: $length;
+  }

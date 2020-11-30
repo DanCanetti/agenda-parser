@@ -1,18 +1,46 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
-        <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
-        <script type="text/javascript" defer src="js/parse-csv.js"></script>
-    </head>
-    <body>
-        <div id="agenda">
-            <h1>{{ title }}</h1>
-            <ol>
-                <li v-for="agendaItem in agendaItems">
-                    {{ agendaItem.Start }} • {{ agendaItem.End }} • {{ agendaItem.Title }} • {{ agendaItem.Speaker }}
-                </li>
-            </ol>
+
+<head>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script type="text/javascript" defer src="js/parse-csv.js"></script>
+</head>
+
+<body>
+    <!--div id="agenda">
+        <h1>{{ title }}</h1>
+        <ol>
+            <li v-for="agendaItem in agendaItems">
+                {{ agendaItem.Start }} • {{ agendaItem.End }} • {{ agendaItem.Title }} • {{ agendaItem.Speaker }}
+            </li>
+        </ol>
+    </div-->
+
+    <div class="section">
+        <div id="agenda" class="event-agenda">
+            <div class="days">
+                <div id="dayfri" class="targetDay">
+                    <h2>Event Aganda • Day One</h2>
+                    <p style="text-align: center; font-size: .75rem;">Some agenda information.</p>
+                    <table class="table">
+                        <tbody>
+                            <tr v-for="agendaItem in agendaItems">
+                                <td>{{ agendaItem.Start }} - {{ agendaItem.End }}</td>
+                                <td>
+                                    <span class="item">
+                                        <strong>{{ agendaItem.Title }}</strong>
+                                        <span class="speaker-name">{{ agendaItem.Speaker }}</span>
+                                    </span>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
         </div>
-    </body>
+    </div>
+
+</body>
+
 </html>
