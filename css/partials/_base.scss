@@ -1,9 +1,9 @@
 // Media Queries
 $screen-sm: 576px;
 @mixin sm {
-   @media (max-width: #{$screen-sm}) {
-       @content;
-   }
+    @media (max-width: #{$screen-sm}) {
+        @content;
+    }
 }
 
 // Mixins
@@ -12,11 +12,22 @@ $screen-sm: 576px;
     -moz-transition: all $length ease-in-out;
     -o-transition: all $length ease-in-out;
     transition: all $length ease-in-out;
-  }
-  
-  @mixin transitiondelay($length) {
+}
+
+@mixin transitiondelay($length) {
     -webkit-transition-delay: $length;
     -moz-transition-delay: $length;
     -o-transition-delay: $length;
     transition-delay: $length;
-  }
+}
+
+// Demo styling
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap');
+
+body {
+    font-family: 'Lato', sans-serif;
+}
+
+.section {
+    padding: 5%;
+}

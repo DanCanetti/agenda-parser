@@ -52,10 +52,10 @@
          margin-top: 10px;
          @include transitionall(.3s);
          &:hover {
-           background: blue;
+           background: #000;
          }
          &.active {
-           background: red;
+           background: #666;
            color: #666;
            &:hover {
              color: #666;
@@ -104,7 +104,7 @@
               width: 50%;
               margin-right: 25px;
               padding-right: 75px;
-              font-weight: 600;
+              font-weight: 700;
               text-align: right;
               position: relative;
               box-shadow: none;
@@ -138,7 +138,7 @@
                 height: 1000px;
                 display: block;
                 position: absolute;
-                background: blue;
+                background: #000;
                 right: 3px;
                 top: 30px;
                 z-index: 0;
@@ -175,7 +175,7 @@
                 display: block;
               }
               .speaker-name {
-                color: red;
+                color: #666;
                 display: block;
                 margin-bottom: 10px;
               }
