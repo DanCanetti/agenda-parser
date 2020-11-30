@@ -10,3 +10,4 @@ I've included an example CSV in the project, fill in the timings and details of 
 
 - Automatically parse JSON file
 - Create option for multiple days
+- Clean up styling
