@@ -26,6 +26,14 @@ $screen-sm: 576px;
 
 body {
     font-family: 'Lato', sans-serif;
+    h1 {
+        width: 100%;
+        text-align: center;
+        margin-bottom: 0px;
+        text-transform: uppercase;
+        font-weight: 700;
+        letter-spacing: .1rem;
+    }
 }
 
 .section {

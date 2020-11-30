@@ -1,6 +1,13 @@
 @import url("https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap");
 body {
   font-family: 'Lato', sans-serif; }
+  body h1 {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 0px;
+    text-transform: uppercase;
+    font-weight: 700;
+    letter-spacing: .1rem; }
 
 .section {
   padding: 5%; }
@@ -21,10 +28,10 @@ body {
         width: 100%; } }
   .event-agenda .days {
     overflow: hidden;
-    margin-top: 50px; }
+    margin-top: 20px; }
     @media (max-width: 576px) {
       .event-agenda .days {
-        margin-top: 75px; } }
+        margin-top: 30px; } }
   .event-agenda .selectDay {
     display: flex;
     flex-direction: row;

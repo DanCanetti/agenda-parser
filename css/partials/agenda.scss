@@ -17,9 +17,9 @@
     }
     .days {
       overflow: hidden;
-      margin-top: 50px;
+      margin-top: 20px;
       @include sm {
-        margin-top: 75px;
+        margin-top: 30px;
       }
     }
     .selectDay {
