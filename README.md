@@ -1,6 +1,6 @@
 # Event Agenda Parser
 
-Parse a JSON file into a basic responsive event agenda.
+Parse a JSON file into a basic responsive event agenda. [View demo](https://agenda-parser.danielcanetti.com/).
 
 ### Usage
 
