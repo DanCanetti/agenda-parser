@@ -8,8 +8,8 @@ I've included an example CSV in the project, fill in the timings and details of 
 
 ### To do
 
-- Automatically parse JSON file
 - Create option for multiple days
 - Clean up styling
 - Add favicon
 - Split files into demo and src
+- Only show file uploader if Webpack in development mode
