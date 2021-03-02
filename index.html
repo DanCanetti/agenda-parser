@@ -2,31 +2,26 @@
 <html>
 
 <head>
-    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
-    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
-    <script type="text/javascript" defer src="js/parse-csv.js"></script>
+    <script type="text/javascript" defer src="dist/parse.js"></script>
     <link rel="stylesheet" rel="async" href="css/agenda.css">
 </head>
 
 <body>
     <div class="section">
+
         <div id="agenda" class="event-agenda">
-            <h1>Event Aganda</h1>
+            <h1>Event Agenda</h1>
+
+            <input type="file" id="file"></input>
+            <button id="submit_button">PARSE FILE</button>
+
             <div class="days">
                 <div id="dayfri" class="targetDay">
                     <h2>Day One</h2>
                     <p style="text-align: center; font-size: .75rem;">Some agenda information.</p>
                     <table class="table">
-                        <tbody>
-                            <tr v-for="agendaItem in agendaItems">
-                                <td>{{ agendaItem.Start }} - {{ agendaItem.End }}</td>
-                                <td>
-                                    <span class="item">
-                                        <strong>{{ agendaItem.Title }}</strong>
-                                        <span class="speaker-name">{{ agendaItem.Speaker }}</span>
-                                    </span>
-                                </td>
-                            </tr>
+                        <tbody class="timeline__body">
+                            <!-- Timeline/Agenda Parsed Here -->
                         </tbody>
                     </table>
                 </div>
