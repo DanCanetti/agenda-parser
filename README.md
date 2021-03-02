@@ -1,10 +1,10 @@
-# Event Agenda Parser
+# Event Agenda/Timeline Parser
 
-Parse a JSON file into a basic responsive event agenda. [View demo](https://agenda-parser.danielcanetti.com/).
+Parse a CSV file into a basic responsive event agenda. [View demo](https://agenda-parser.danielcanetti.com/).
 
 ### Usage
 
-I've included an example CSV in the project, fill in the timings and details of each talk and convert to a JSON file. Call the JSON file from the parse-csv.js script and this will create the agenda.
+I've included an example CSV in the project. Upload this to the demo and hit parse.
 
 ### To do
 
