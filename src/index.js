@@ -72,7 +72,7 @@ function getZIP() {
 
     // Get CSS Files
     const timelinescss = '_timeline.scss';
-    fetch('.src/partials/' + timelinescss)
+    fetch('downloads/' + timelinescss)
     .then(res => res.arrayBuffer())
     .then(ab => {
         scss.file(timelinescss, ab);
