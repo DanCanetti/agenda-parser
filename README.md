@@ -4,7 +4,17 @@ Parse a CSV file into a basic responsive event agenda. [View demo](https://agend
 
 ### Usage
 
-I've included an example CSV in the project. Upload this to the demo and hit parse.
+`npm install`
+
+To create a timeline/agena:
+
+- Change the `webpack.config.js` mode to `development`
+- Run `npm run build`
+- Download the demo CSV
+- Update to your requirements
+- *If you change the headings you'll have to modify the code*
+- Upload the CSV and hit `Create Agenda/Timeline`
+- 
 
 ### To do
 

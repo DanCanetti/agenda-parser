@@ -1,0 +1,10 @@
+/*
+    Main
+    ---
+    Compiles the .scss partials and creates the final CSS file.
+*/
+
+@import 'reset';
+@import 'base';
+@import 'layout';
+@import 'timeline';

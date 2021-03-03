@@ -2,28 +2,45 @@
 <html>
 
 <head>
+    <title>Agenda/Timeline Parser</title>
     <script type="text/javascript" defer src="dist/parse.js"></script>
-    <link rel="stylesheet" rel="async" href="css/agenda.css">
+    <link rel="stylesheet" rel="async" href="dist/agenda-csv-parser.css">
 </head>
 
 <body>
     <div class="section">
-
         <div id="agenda" class="event-agenda">
-            <h1>Event Agenda</h1>
-
-            <input type="file" id="file"></input>
-            <button id="submit_button">PARSE FILE</button>
-
-            <div class="days">
-                <div id="dayfri" class="targetDay">
-                    <h2>Day One</h2>
-                    <p style="text-align: center; font-size: .75rem;">Some agenda information.</p>
-                    <table class="table">
-                        <tbody class="timeline__body">
-                            <!-- Timeline/Agenda Parsed Here -->
-                        </tbody>
-                    </table>
+            <h1>Agenda/Timeline Parser</h1>
+            <div class="timeline-creation">
+                <div class="download-csv">
+                    <p><strong>1. Download Demo CSV</strong></p>
+                    <span>Use this file as a starting point.</span>
+                    <a class="btn" href="csv/demo.csv" download>Download</a>
+                </div>
+                <div class="upload-csv">
+                    <p><strong>2. Upload CSV</strong></p>
+                    <span>Update the CSV to your suit requirements and upload.</span>
+                    <input id="file" type="file">
+                    <button id="create">Create Agenda/Timeline</button>
+                </div>
+                <div class="copy-code">
+                    <p><strong>3. Get code</strong></p>
+                    <span>Download your agenda/timeline and the styling.</span>
+                    <button id="download">Get Files</button>
+                </div>
+            </div>
+            <h2 class="preview-header">Agenda/Timeline Preview</h2>
+            <div id="timeline-content">
+                <div class="days">
+                    <div id="dayfri" class="targetDay">
+                        <h2>Day One</h2>
+                        <p style="text-align: center; font-size: .75rem;">Some agenda information.</p>
+                        <table class="table">
+                            <tbody class="timeline__body">
+                                <!-- Timeline/Agenda Parsed Here -->
+                            </tbody>
+                        </table>
+                    </div>
                 </div>
             </div>
         </div>
