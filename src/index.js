@@ -12,11 +12,18 @@ if (process.env.NODE_ENV === 'development') {
 }
 
 // Hide Preview
-$('.preview-header, #timeline-content').hide();
+$('.preview').hide();
 
 // Get csv file
 var file = document.getElementById("file").files[0];
 var timelineContent = '';
+
+// Enable parse after file uploaded
+$("#file").on("change", function () {
+    if($(this).val()) {
+        $('#create').prop('disabled', false);
+    }
+});
 
 // Button parse CSV
 var createbtn = document.getElementById('create');
@@ -35,7 +42,10 @@ function parseFile(url, callBack) {
         keepEmptyRows: false,
         skipEmptyLines: true,
         complete: function (results) {
-            $('.preview-header, #timeline-content').show();
+            // Show Preview
+            $('.preview').show();
+            // Enable Download
+            $('#download').prop('disabled', false);
             var timelineContent = results.data;
             $.each(timelineContent, function (timelineID, timelineItem) {
                 const array = [timelineItem]
@@ -60,23 +70,31 @@ function parseFile(url, callBack) {
     });
 }
 
-// Create ZIP and Download
+// Read file contents
+function readLocalFile(file) {
+    var rawFile = new XMLHttpRequest();
+    rawFile.open("GET", file, false);
+    rawFile.onreadystatechange = function () {
+        if (rawFile.readyState === 4) {
+            if (rawFile.status === 200 || rawFile.status == 0) {
+                var allText = rawFile.responseText;
+            }
+        }
+    }
+    rawFile.send(null);
+}
+
+// Create ZIP and download
 var downloadbtn = document.getElementById('download');
 downloadbtn.addEventListener('click', getZIP);
 
 function getZIP() {
     var zip = new JSZip();
 
-    // Generate CSS Directory
+    // // Generate and populate scss directory
     var scss = zip.folder("scss");
-
-    // Get CSS Files
-    const timelinescss = '_timeline.scss';
-    fetch('downloads/' + timelinescss)
-    .then(res => res.arrayBuffer())
-    .then(ab => {
-        scss.file(timelinescss, ab);
-    })
+    var timelinescss = readLocalFile("src/partials/_timeline.scss");
+    scss.file("_timeline.scss", timelinescss);
 
     // Create html file
     var timelinecontent = $('#timeline-content').html();

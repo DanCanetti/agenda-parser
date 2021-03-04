@@ -8,43 +8,45 @@
 </head>
 
 <body>
-    <div class="section">
-        <div id="agenda" class="event-agenda">
-            <h1>Agenda/Timeline Parser</h1>
-            <div class="timeline-creation">
-                <div class="download-csv">
-                    <p><strong>1. Download Demo CSV</strong></p>
-                    <span>Use this file as a starting point.</span>
-                    <a class="btn" href="downloads/demo.csv" download>Download</a>
-                </div>
-                <div class="upload-csv">
-                    <p><strong>2. Upload CSV</strong></p>
-                    <span>Update the CSV to your suit requirements and upload.</span>
-                    <input id="file" type="file">
-                    <button id="create">Create Agenda/Timeline</button>
-                </div>
-                <div class="copy-code">
-                    <p><strong>3. Get code</strong></p>
-                    <span>Download your agenda/timeline and the styling.</span>
-                    <button id="download">Get Files</button>
-                </div>
+    <section>
+        <h1>Agenda/Timeline Parser</h1>
+        <div class="timeline-creation">
+            <div class="download-csv">
+                <p><strong>1. Download Demo CSV</strong></p>
+                <span>Use this file as a starting point.</span>
+                <a class="btn" href="downloads/demo.csv" download>Download</a>
             </div>
-            <h2 class="preview-header">Agenda/Timeline Preview</h2>
-            <div id="timeline-content">
-                <div class="days">
-                    <div id="dayfri" class="targetDay">
-                        <h2>Day One</h2>
-                        <p style="text-align: center; font-size: .75rem;">Some agenda information.</p>
-                        <table class="table">
-                            <tbody class="timeline__body">
-                                <!-- Timeline/Agenda Parsed Here -->
-                            </tbody>
-                        </table>
-                    </div>
+            <div class="upload-csv">
+                <p><strong>2. Upload CSV</strong></p>
+                <span>Update the CSV to your suit requirements and upload.</span>
+                <input id="file" type="file" accept=".csv">
+                <button id="create" disabled>Create Agenda/Timeline</button>
+            </div>
+            <div class="copy-code">
+                <p><strong>3. Get code</strong></p>
+                <span>Download your agenda/timeline and the styling.</span>
+                <button id="download" disabled>Get Files</button>
+            </div>
+        </div>
+    </section>
+
+    <section class="preview">
+        <h1>Agenda/Timeline Preview</h1>
+        <div id="timeline-content">
+            <div id="agenda" class="event-agenda">
+                <div class="timeline">
+                    <h2>Your Agenda/Timeline Name</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi suscipit dui nec facilisis porttitor.
+                    </p>
+                    <table class="table">
+                        <tbody class="timeline__body">
+                            <!-- Timeline/Agenda Parsed Here -->
+                        </tbody>
+                    </table>
                 </div>
             </div>
         </div>
-    </div>
+    </section>
 
 </body>
 

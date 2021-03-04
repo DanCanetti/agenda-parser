@@ -1,0 +1,47 @@
+/*
+    Modules
+    ---
+    Modules are the reusable, modular parts of the design.
+    E.G. callouts, sidebar sections, product lists
+*/
+
+// Timeline Creation
+.timeline-creation {
+    display: flex;
+    justify-content: center;
+    div {
+        // Displayed if webpack is in 'development' mode.
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+        width: 258px;
+        margin: 20px 10px;
+        padding: 25px;
+        border-radius: 10px;
+        background: #f5f5f5;
+        input, span {
+            margin: 10px 0;
+            font-size: .8rem;
+        }
+        button, .btn {
+            border: none;
+            padding: 8px 16px;
+            background: #333;
+            border-radius: 3px;
+            color: #fff;
+            font-size: .8rem;
+            text-decoration: none;
+            margin-top: auto;
+            @include transitionall(.3s);
+            &:hover {
+                cursor: pointer;
+                background: #666;
+            }
+            &:disabled {
+                opacity: 0.5;
+                cursor: not-allowed;
+            }
+        }
+    }
+}

@@ -1,112 +1,39 @@
 /*
-    Modules
+    Timeline
     ---
-    Modules are the reusable, modular parts of the design.
-    E.G. callouts, sidebar sections, product lists
+    Your timeline styling.
 */
 
-// Timeline Creation
-
-// CSV Upload
-.timeline-creation {
-    display: flex;
-    justify-content: center;
-    div {
-        // Displayed if webpack is in 'development' mode.
-        display: flex;
-        flex-direction: column;
-        align-items: flex-start;
-        justify-content: flex-start;
-        width: 258px;
-        margin: 20px 10px;
-        padding: 25px;
-        border-radius: 10px;
-        background: #f5f5f5;
-        input, span {
-            margin: 10px 0;
-            font-size: .8rem;
-        }
-        button, .btn {
-            border: none;
-            padding: 8px 16px;
-            background: #333;
-            border-radius: 3px;
-            color: #fff;
-            font-size: .8rem;
-            text-decoration: none;
-            margin-top: auto;
-            &:hover {
-                cursor: pointer;
-                background: #666;
-            }
-        }
+// Media Queries
+$screen-sm: 576px;
+@mixin sm {
+    @media (min-width: #{$screen-sm}) {
+        @content;
     }
 }
 
-// Timeline/Aganda
+// Timeline/Agenda
 .event-agenda {
     max-width: 70%;
     position: relative;
-    margin: -50px auto 0 auto;
+    margin: 0 auto;
     h2 {
         width: 100%;
         text-align: center !important;
         font-size: 1.75rem;
         font-weight: 400;
         color: #000;
-        margin: 0;
+        margin: 0 0 15px;
     }
-    .days {
+    .timeline {
         overflow: hidden;
         margin-top: 30px;
+        p {
+            text-align: center;
+            font-size: .75rem;
+        }
         @include sm {
             margin-top: 20px;
-        }
-    }
-    .selectDay {
-        display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
-        justify-content: center;
-        align-items: center;
-        margin: auto;
-        max-width: 130px;
-        &.bottom {
-            display: none;
-            top: auto;
-            bottom: 0;
-            position: absolute;
-            @include sm {
-                display: block;
-            }
-        }
-        span {
-            font-size: 1.25rem;
-            background: #666;
-            border: 1px solid #000;
-            cursor: pointer;
-            text-transform: capitalize;
-            font-weight: 400;
-            padding: 12px 18px;
-            color: #000;
-            width: 100%;
-            max-width: 200px;
-            text-align: center;
-            margin-top: 10px;
-            @include transitionall(0.3s);
-            &:hover {
-                background: #000;
-            }
-            &.active {
-                background: #666;
-                color: #666;
-                &:hover {
-                    color: #666;
-                }
-            }
-        }
-        @include sm {
-            max-width: 100%;
         }
     }
     table {

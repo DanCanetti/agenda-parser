@@ -42,3 +42,10 @@ body {
       letter-spacing: .1rem;
   }
 }
+
+section {
+    padding: 5%;
+    &.preview {
+        padding-top: 0;
+    }
+}
