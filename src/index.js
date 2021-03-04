@@ -20,7 +20,7 @@ var timelineContent = '';
 
 // Enable parse after file uploaded
 $("#file").on("change", function () {
-    if($(this).val()) {
+    if ($(this).val()) {
         $('#create').prop('disabled', false);
     }
 });
@@ -70,31 +70,34 @@ function parseFile(url, callBack) {
     });
 }
 
-// Read file contents
-function readLocalFile(file) {
-    var rawFile = new XMLHttpRequest();
-    rawFile.open("GET", file, false);
-    rawFile.onreadystatechange = function () {
-        if (rawFile.readyState === 4) {
-            if (rawFile.status === 200 || rawFile.status == 0) {
-                var timelinescss = rawFile.responseText;
-            }
-        }
-    }
-    rawFile.send(null);
-}
-
 // Create ZIP and download
 var downloadbtn = document.getElementById('download');
 downloadbtn.addEventListener('click', getZIP);
 
 function getZIP() {
     var zip = new JSZip();
+    var timelinescss;
+    
+    // Read file contents
+    function readLocalFile(file) {
+        var rawFile = new XMLHttpRequest();
+        rawFile.open("GET", file, false);
+        rawFile.onreadystatechange = function () {
+            if (rawFile.readyState === 4) {
+                if (rawFile.status === 200 || rawFile.status == 0) {
+                    timelinescss = rawFile.responseText;
+                }
+            }
+        }
+        rawFile.send(null);
+    }
 
-    // // Generate and populate scss directory
-    var scss = zip.folder("scss");
+    // Read _timeline.scss
     readLocalFile("src/partials/_timeline.scss");
-    console.log(timelinescss)
+
+    // Generate and populate scss directory
+    var scss = zip.folder("scss");
+    console.log(timelinescss);
     scss.file("_timeline.scss", timelinescss);
 
     // Create html file
