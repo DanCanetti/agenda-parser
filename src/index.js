@@ -77,7 +77,7 @@ function readLocalFile(file) {
     rawFile.onreadystatechange = function () {
         if (rawFile.readyState === 4) {
             if (rawFile.status === 200 || rawFile.status == 0) {
-                var allText = rawFile.responseText;
+                var timelinescss = rawFile.responseText;
             }
         }
     }
@@ -93,7 +93,8 @@ function getZIP() {
 
     // // Generate and populate scss directory
     var scss = zip.folder("scss");
-    var timelinescss = readLocalFile("src/partials/_timeline.scss");
+    readLocalFile("src/partials/_timeline.scss");
+    console.log(timelinescss)
     scss.file("_timeline.scss", timelinescss);
 
     // Create html file
