@@ -1,6 +1,6 @@
 # Event Agenda/Timeline Parser
 
- [Go to site](https://agenda-parser.danielcanetti.com/).
+ [Go to site](https://danielcanetti.com/tools/agenda-csv-parser/).
 
 Parse a CSV file into a basic responsive event agenda/timeline.
 
